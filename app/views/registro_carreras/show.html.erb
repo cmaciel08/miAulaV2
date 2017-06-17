@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombrecarrera:</strong>
+  <%= @registro_carrera.nombreCarrera %>
+</p>
+
+<p>
+  <strong>Anho:</strong>
+  <%= @registro_carrera.anho %>
+</p>
+
+<p>
+  <strong>Semestre:</strong>
+  <%= @registro_carrera.semestre %>
+</p>
+
+<%= link_to 'Edit', edit_registro_carrera_path(@registro_carrera) %> |
+<%= link_to 'Back', registro_carreras_path %>

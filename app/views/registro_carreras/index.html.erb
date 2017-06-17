@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h2 class="text-center text-muted">Registro de Carrera</h2>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombrecarrera</th>
+      <th>Anho</th>
+      <th>Semestre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registro_carreras.each do |registro_carrera| %>
+      <tr>
+        <td><%= registro_carrera.nombreCarrera %></td>
+        <td><%= registro_carrera.anho %></td>
+        <td><%= registro_carrera.semestre %></td>
+        <td><%= link_to 'Show', registro_carrera %></td>
+        <td><%= link_to 'Edit', edit_registro_carrera_path(registro_carrera) %></td>
+        <td><%= link_to 'Eliminar', registro_carrera, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<button type="button" class="btn btn-info"><%= link_to 'New Registro Carrera', new_registro_carrera_path %></button>

@@ -1,0 +1,2 @@
+class RegistroCarrera < ApplicationRecord
+end
