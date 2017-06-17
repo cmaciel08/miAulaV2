@@ -18,8 +18,8 @@
         <td><%= registro_carrera.nombreCarrera %></td>
         <td><%= registro_carrera.anho %></td>
         <td><%= registro_carrera.semestre %></td>
-        <td><%= link_to 'Show', registro_carrera %></td>
-        <td><%= link_to 'Edit', edit_registro_carrera_path(registro_carrera) %></td>
+        <td><%= link_to 'Ver', registro_carrera %></td>
+        <td><%= link_to 'Editar', edit_registro_carrera_path(registro_carrera) %></td>
         <td><%= link_to 'Eliminar', registro_carrera, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
