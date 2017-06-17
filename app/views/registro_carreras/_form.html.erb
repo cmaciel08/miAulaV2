@@ -11,22 +11,46 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombreCarrera %>
-    <%= form.text_field :nombreCarrera, id: :registro_carrera_nombreCarrera %>
-  </div>
 
-  <div class="field">
-    <%= form.label :anho %>
-    <%= form.text_field :anho, id: :registro_carrera_anho %>
-  </div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Carrera</th>
+      <th>Año</th>
+      <th>Semestre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-  <div class="field">
-    <%= form.label :semestre %>
-    <%= form.text_field :semestre, id: :registro_carrera_semestre %>
-  </div>
+  <tbody>
+    <tr>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+      <td>  <div class="field">
+          <%= form.label :nombreCarrera %>
+          <%= form.text_field :nombreCarrera, id: :registro_carrera_nombreCarrera %>
+        </div>
+      </td>
+
+      <td>
+        <div class="field">
+          <%= form.label :anho %>
+          <%= form.text_field :anho, id: :registro_carrera_anho %>
+        </div>
+        </td>
+
+        <td>
+        <div class="field">
+          <%= form.label :semestre %>
+          <%= form.text_field :semestre, id: :registro_carrera_semestre %>
+        </div>
+      </td>
+
+      <td>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      </td>  
+      <% end %>
+  <tr>
+  </tbody>
+</table>  
