@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :detalle_aulas
+  resources :asignacion_aulas
   resources :usuarios
   resources :facultads
   resources :aulas

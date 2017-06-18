@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Asignacion Aulas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Observacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asignacion_aulas.each do |asignacion_aula| %>
+      <tr>
+        <td><%= asignacion_aula.observacion %></td>
+        <td><%= link_to 'Show', asignacion_aula %></td>
+        <td><%= link_to 'Edit', edit_asignacion_aula_path(asignacion_aula) %></td>
+        <td><%= link_to 'Destroy', asignacion_aula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asignacion Aula', new_asignacion_aula_path %>

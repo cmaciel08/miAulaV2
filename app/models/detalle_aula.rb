@@ -1,0 +1,2 @@
+class DetalleAula < ApplicationRecord
+end
