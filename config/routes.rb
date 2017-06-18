@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :detalle_aulas
   resources :asignacion_aulas
   resources :usuarios

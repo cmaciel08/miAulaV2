@@ -50,3 +50,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '>= 3.3.6'
 gem 'autoprefixer-rails'
+
+# .--------------------------------------
+# Intslamos la gema de Device para loguear a los usuarios
+# Resolver problemas 'bcrypt' para device https://github.com/codahale/bcrypt-ruby/issues/149
+gem 'devise'
+#---------------------------------------------
