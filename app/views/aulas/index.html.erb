@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Aulas</h1>
+<div class="container">
+<h2 class="text-center text-muted">Aulas</h2>
+</div>
 
 <table>
   <thead>
@@ -20,9 +22,9 @@
         <td><%= aula.bloque %></td>
         <td><%= aula.capacidad %></td>
         <td><%= aula.observacion %></td>
-        <td><%= link_to 'Show', aula %></td>
-        <td><%= link_to 'Edit', edit_aula_path(aula) %></td>
-        <td><%= link_to 'Destroy', aula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', aula %></td>
+        <td><%= link_to 'Editar', edit_aula_path(aula) %></td>
+        <td><%= link_to 'Eliminar', aula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Aula', new_aula_path %>
+<%= link_to 'Nuevo', new_aula_path %>

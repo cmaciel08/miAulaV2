@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Detalle Aulas</h1>
+<div class="container">
+<h2 class="text-center text-muted">Detalle Aulas</h2>
+</div>
 
 <table>
   <thead>
@@ -14,9 +15,9 @@
     <% @detalle_aulas.each do |detalle_aula| %>
       <tr>
         <td><%= detalle_aula.observacion %></td>
-        <td><%= link_to 'Show', detalle_aula %></td>
-        <td><%= link_to 'Edit', edit_detalle_aula_path(detalle_aula) %></td>
-        <td><%= link_to 'Destroy', detalle_aula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', detalle_aula %></td>
+        <td><%= link_to 'Editar', edit_detalle_aula_path(detalle_aula) %></td>
+        <td><%= link_to 'Eliminar', detalle_aula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Detalle Aula', new_detalle_aula_path %>
+<%= link_to 'Nuevo', new_detalle_aula_path %>

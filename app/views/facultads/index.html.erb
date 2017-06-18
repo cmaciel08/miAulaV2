@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Facultads</h1>
+<div class="container">
+<h2 class="text-center text-muted">Facultads</h2>
+</div>
 
 <table>
   <thead>
@@ -14,9 +16,9 @@
     <% @facultads.each do |facultad| %>
       <tr>
         <td><%= facultad.nombre %></td>
-        <td><%= link_to 'Show', facultad %></td>
-        <td><%= link_to 'Edit', edit_facultad_path(facultad) %></td>
-        <td><%= link_to 'Destroy', facultad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', facultad %></td>
+        <td><%= link_to 'Editar', edit_facultad_path(facultad) %></td>
+        <td><%= link_to 'Eliminar', facultad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Facultad', new_facultad_path %>
+<%= link_to 'Nuevo', new_facultad_path %>
