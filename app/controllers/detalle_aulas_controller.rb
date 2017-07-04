@@ -10,6 +10,7 @@ class DetalleAulasController < ApplicationController
   # GET /detalle_aulas/1
   # GET /detalle_aulas/1.json
   def show
+    @detalle_aula = DetalleAula.find(params[:id]);
   end
 
   # GET /detalle_aulas/new
@@ -69,6 +70,9 @@ class DetalleAulasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def detalle_aula_params
-      params.require(:detalle_aula).permit(:observacion)
+      params.require(:detalle_aula).permit(:observacion, :aula_id)
+
     end
+
+
 end
