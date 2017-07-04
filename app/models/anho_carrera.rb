@@ -1,0 +1,2 @@
+class AnhoCarrera < ApplicationRecord
+end
