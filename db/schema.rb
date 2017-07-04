@@ -8,9 +8,9 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended that you check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system..
 
-ActiveRecord::Schema.define(version: 20170618032330) do
+ActiveRecord::Schema.define(version: 20170622004204) do
 
   create_table "asignacion_aulas", force: :cascade do |t|
     t.string "observacion"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 20170618032330) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "facultad_id"
+    t.integer "registro_carreras_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
