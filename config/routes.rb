@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :asignacions
   resources :anho_carreras
   devise_for :users
   resources :detalle_aulas
