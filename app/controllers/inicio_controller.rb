@@ -4,7 +4,7 @@ class InicioController < ApplicationController
   def index
     @asignacion_aulas = AsignacionAula.all
   end
-  # GET /asignacion_aulas/1
+  # GET /asignacion_aulas/
   def show
   end
   
