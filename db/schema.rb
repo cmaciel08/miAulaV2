@@ -8,11 +8,27 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended that you check this file into your version control system..
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170622004204) do
+ActiveRecord::Schema.define(version: 20170705000216) do
+
+  create_table "anho_carreras", force: :cascade do |t|
+    t.string "anho"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "asignacion_aulas", force: :cascade do |t|
+    t.string "observacion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "anho_carrera_id"
+    t.integer "facultads_id"
+    t.integer "aulas_id"
+    t.integer "registro_carreras_id"
+  end
+
+  create_table "asignacions", force: :cascade do |t|
     t.string "observacion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

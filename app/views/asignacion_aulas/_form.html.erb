@@ -1,4 +1,6 @@
 <%= form_with(model: asignacion_aula, local: true) do |form| %>
+  
+
   <% if asignacion_aula.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(asignacion_aula.errors.count, "error") %> prohibited this asignacion_aula from being saved:</h2>
@@ -10,7 +12,16 @@
       </ul>
     </div>
   <% end %>
+
   <div class="field">
+    <%= form.label :facultads_id %><br>
+    <%= form.collection_select(:facultads_id, Facultad.all, :id, :nombre) %><br>
+    <%= form.label :registro_carreras_id %><br>
+    <%= form.collection_select(:registro_carreras_id, RegistroCarrera.all, :id, :nombreCarrera) %><br>
+    <%= form.label :anho_carrera_id %><br>
+    <%= form.collection_select(:anho_carrera_id, AnhoCarrera.all, :id, :anho) %><br>
+    <%= form.label :aulas_id %><br>
+    <%= form.collection_select(:aulas_id, Aula.all, :id, :nombre) %><br>
     <%= form.label :observacion %>
     <%= form.text_field :observacion, id: :asignacion_aula_observacion %>
   </div>
