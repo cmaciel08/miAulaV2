@@ -13,6 +13,9 @@
   <tbody>
     <% @asignacion_aulas.each do |asignacion_aula| %>
       <tr>
+        <td><%= asignacion_aula.facultads_id %></td>
+        <td><%= asignacion_aula.registro_carreras_id %></td>
+        <td><%= asignacion_aula.anho_carrera_id %></td>
         <td><%= asignacion_aula.observacion %></td>
         <td><%= link_to 'Show', asignacion_aula %></td>
         <td><%= link_to 'Edit', edit_asignacion_aula_path(asignacion_aula) %></td>
