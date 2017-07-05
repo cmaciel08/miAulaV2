@@ -10,11 +10,15 @@
 </p>
 <p>
   <strong>Facultad:</strong>
-  <%= @asignacion_aula.facultads_id %>
+  <%= @asignacion_aula.facultad_id %>
 </p>
 <p>
   <strong>Carrera:</strong>
-  <%= @asignacion_aula.registro_carreras_id %>
+  <%= @asignacion_aula.registro_carrera_id %>
+</p>
+<p>
+  <strong>Carrera:</strong>
+  <%= @asignacion_aula.aula_id %>
 </p>
 
 <%= link_to edit_asignacion_aula_path(@asignacion_aula),  class:"btn btn-success"  do %>

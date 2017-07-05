@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705000216) do
+ActiveRecord::Schema.define(version: 20170705230315) do
 
   create_table "anho_carreras", force: :cascade do |t|
     t.string "anho"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20170705000216) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "anho_carrera_id"
-    t.integer "facultads_id"
-    t.integer "aulas_id"
-    t.integer "registro_carreras_id"
+    t.integer "facultad_id"
+    t.integer "aula_id"
+    t.integer "registro_carrera_id"
   end
 
   create_table "asignacions", force: :cascade do |t|

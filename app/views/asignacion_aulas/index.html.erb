@@ -13,8 +13,8 @@
   <tbody>
     <% @asignacion_aulas.each do |asignacion_aula| %>
       <tr>
-        <td><%= asignacion_aula.facultads_id %></td>
-        <td><%= asignacion_aula.registro_carreras_id %></td>
+        <td><%= asignacion_aula.facultad_id %></td>
+        <td><%= asignacion_aula.registro_carrera_id %></td>
         <td><%= asignacion_aula.anho_carrera_id %></td>
         <td><%= asignacion_aula.observacion %></td>
         <td><%= link_to asignacion_aula,class:"btn btn-success"  do %>
