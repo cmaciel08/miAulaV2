@@ -2,5 +2,7 @@
 
 <%= render 'form', facultad: @facultad %>
 
-<%= link_to 'Show', @facultad %> |
-<%= link_to 'Back', facultads_path %>
+<%= link_to @facultad, class:" btn btn-info" do  %> 
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %> |
+<button type="button" class="btn btn-defauld"><%= link_to 'Back', facultads_path %></button>

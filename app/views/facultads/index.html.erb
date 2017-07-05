@@ -18,7 +18,7 @@
         <td><%= facultad.nombre %></td>
         <td><%= link_to 'Ver', facultad %></td>
         <td><%= link_to 'Editar', edit_facultad_path(facultad) %></td>
-        <td><%= link_to 'Eliminar', facultad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', facultad, method: :delete, data: { confirm: 'Estas Seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<button type="button" class="btn btn-info"><%= link_to 'Nuevo', new_facultad_path %></button>
+<button type="button" class="btn btn-danger"><%= link_to 'Nuevo', new_facultad_path %></button>

@@ -18,9 +18,20 @@
         <td><%= registro_carrera.nombreCarrera %></td>
         <td><%= registro_carrera.anho %></td>
         <td><%= registro_carrera.semestre %></td>
-        <td><%= link_to 'Ver', registro_carrera %></td>
-        <td><%= link_to 'Editar', edit_registro_carrera_path(registro_carrera) %></td>
-        <td><%= link_to 'Eliminar', registro_carrera, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to registro_carrera, class:"btn btn-success"  do %>
+            <i class="glyphicon glyphicon-eye-open"></i>
+           <% end %> </td>
+
+
+        <td><%= link_to edit_registro_carrera_path(registro_carrera), class:" btn btn-info" do  %> 
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %> </td>
+
+
+        <td><%= link_to registro_carrera, method: :delete, data: { confirm: 'Estas Seguro?' }, class:'btn btn-danger' do %> 
+             <i class="glyphicon glyphicon-trash"></i>
+          <% end %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +39,4 @@
 
 <br>
 
-<button type="button" class="btn btn-info"><%= link_to 'Nuevo', new_registro_carrera_path %></button>
+<button type="button" class="btn btn-danger"><%= link_to 'Nuevo', new_registro_carrera_path %></button>

@@ -1,6 +1,8 @@
-<h1>Editing Asignacion Aula</h1>
+<h1>Editar Asignacion Aula</h1>
 
-<%= render 'form', asignacion_aula: @asignacion_aula %>
+<%= render 'form', asignacion_aula: @asignacion_aula %><br>
 
-<%= link_to 'Show', @asignacion_aula %> |
-<%= link_to 'Back', asignacion_aulas_path %>
+<%= link_to @asignacion_aula, class:" btn btn-info" do  %> 
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %> |
+<button type="button" class="btn btn-defauld"><%= link_to 'Back', asignacion_aulas_path %></button>
