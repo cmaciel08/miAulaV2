@@ -15,5 +15,5 @@
   <%= @registro_carrera.semestre %>
 </p>
 
-<%= link_to 'Edit', edit_registro_carrera_path(@registro_carrera) %> |
-<%= link_to 'Back', registro_carreras_path %>
+<%= link_to  edit_registro_carrera_path(@registro_carrera), class: "btn btn-success" do %> <i class="glyphicon glyphicon-pencil"></i><% end %> |
+<button type="button" class="btn btn-defauld"> <%= link_to 'Atras', registro_carreras_path %> </button>

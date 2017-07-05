@@ -5,5 +5,7 @@
   <%= @detalle_aula.observacion %>
 </p>
 
-<%= link_to 'Edit', edit_detalle_aula_path(@detalle_aula) %> |
-<%= link_to 'Back', detalle_aulas_path %>
+<%= link_to edit_detalle_aula_path(@detalle_aula), class:" btn btn-info" do  %> 
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %>  %> |
+<button type="button" class="btn btn-default"><%= link_to 'Atras', detalle_aulas_path %></button>

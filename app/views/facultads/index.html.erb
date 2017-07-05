@@ -16,9 +16,20 @@
     <% @facultads.each do |facultad| %>
       <tr>
         <td><%= facultad.nombre %></td>
-        <td><%= link_to 'Ver', facultad %></td>
-        <td><%= link_to 'Editar', edit_facultad_path(facultad) %></td>
-        <td><%= link_to 'Eliminar', facultad, method: :delete, data: { confirm: 'Estas Seguro?' } %></td>
+
+        <td><%= link_to facultad, class:"btn btn-success"  do %>
+            <i class="glyphicon glyphicon-eye-open"></i>
+           <% end %> </td>
+
+
+        <td><%= link_to edit_facultad_path(facultad), class:" btn btn-info" do  %> 
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %> </td>
+
+
+        <td><%= link_to facultad, method: :delete, data: { confirm: 'Estas Seguro?' }, class:'btn btn-danger' do %> 
+             <i class="glyphicon glyphicon-trash"></i>
+          <% end %></td>
       </tr>
     <% end %>
   </tbody>

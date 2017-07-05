@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Asignacions</h1>
+<h1>Asignaciones</h1>
 
 <table>
   <thead>
@@ -14,9 +14,20 @@
     <% @asignacions.each do |asignacion| %>
       <tr>
         <td><%= asignacion.observacion %></td>
-        <td><%= link_to 'Show', asignacion %></td>
-        <td><%= link_to 'Edit', edit_asignacion_path(asignacion) %></td>
-        <td><%= link_to 'Destroy', asignacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to asignacion, class:"btn btn-success"  do %>
+            <i class="glyphicon glyphicon-eye-open"></i>
+           <% end %></td>
+
+
+        <td><%= link_to  edit_asignacion_path(asignacion),class:" btn btn-info" do  %> 
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %></td>
+
+
+        <td><%= link_to asignacion, method: :delete, data: { confirm: 'Estas Seguro?' }, class:'btn btn-danger' do %> 
+             <i class="glyphicon glyphicon-trash"></i>
+          <% end %></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Asignacion', new_asignacion_path %>
+<%= link_to 'Nueva Asignacion', new_asignacion_path %>

@@ -17,9 +17,18 @@
         <td><%= asignacion_aula.registro_carreras_id %></td>
         <td><%= asignacion_aula.anho_carrera_id %></td>
         <td><%= asignacion_aula.observacion %></td>
-        <td><%= link_to 'Show', asignacion_aula %></td>
-        <td><%= link_to 'Edit', edit_asignacion_aula_path(asignacion_aula) %></td>
-        <td><%= link_to 'Destroy', asignacion_aula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to asignacion_aula,class:"btn btn-success"  do %>
+            <i class="glyphicon glyphicon-eye-open"></i>
+           <% end %> </td>
+
+        <td><%= link_to edit_asignacion_aula_path(asignacion_aula), class:" btn btn-info" do  %> 
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %></td>
+
+
+        <td><%= link_to asignacion_aula, method: :delete, data: { confirm: 'Estas Seguro?' }, class:'btn btn-danger' do %> 
+             <i class="glyphicon glyphicon-trash"></i>
+          <% end %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +37,4 @@
 <br>
 
 
-<button type="button" class="btn btn-info"><%= link_to 'New Asignacion Aula', new_asignacion_aula_path %></button>
+<button type="button" class="btn btn-info"><%= link_to 'Nueva Asignacion Aula', new_asignacion_aula_path %></button>

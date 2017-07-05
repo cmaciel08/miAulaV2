@@ -2,5 +2,7 @@
 
 <%= render 'form', detalle_aula: @detalle_aula %>
 
-<%= link_to 'Show', @detalle_aula %> |
-<%= link_to 'Back', detalle_aulas_path %>
+<%= link_to @detalle_aula, class:"btn btn-success"  do %>
+            <i class="glyphicon glyphicon-eye-open"></i>
+           <% end %> |
+<button type="button" class="btn btn-default"><%= link_to 'Atras', detalle_aulas_path %></button>

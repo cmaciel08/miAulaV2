@@ -19,7 +19,7 @@
         <td><%= detalle_aula.aula_id %></td>
         <td><%= link_to 'Ver', detalle_aula %></td>
         <td><%= link_to 'Editar', edit_detalle_aula_path(detalle_aula) %></td>
-        <td><%= link_to 'Eliminar', detalle_aula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', detalle_aula, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 <br>
 
 
-<button type="button" class="btn btn-info"><%= link_to 'Nuevo', new_detalle_aula_path %></button>
+<button type="button" class="btn btn-default"><%= link_to 'Nuevo', new_detalle_aula_path %></button>

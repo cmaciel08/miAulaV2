@@ -17,5 +17,7 @@
   <%= @asignacion_aula.registro_carreras_id %>
 </p>
 
-<%= link_to 'Edit', edit_asignacion_aula_path(@asignacion_aula) %> |
-<%= link_to 'Back', asignacion_aulas_path %>
+<%= link_to edit_asignacion_aula_path(@asignacion_aula),  class:"btn btn-success"  do %>
+            <i class="glyphicon glyphicon-pencil"></i>
+           <% end %> |
+<button type="button" class="btn btn-defaul"><%= link_to 'Atras', asignacion_aulas_path %></button>

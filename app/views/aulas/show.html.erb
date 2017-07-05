@@ -20,4 +20,7 @@
   <%= @aula.observacion %>
 </p>
 
-<button type="button" class="btn btn-danger"><%= link_to 'Edit', edit_aula_path(@aula) %></button> | <button type="button" class="btn btn-default"><%= link_to 'Back', aulas_path %></button>
+<%= link_to edit_aula_path(@aula), class:" btn btn-info" do  %> 
+    <i class="glyphicon glyphicon-pencil"></i>
+    <% end %> </button> | 
+<button type="button" class="btn btn-default"><%= link_to 'Atras', aulas_path %></button>

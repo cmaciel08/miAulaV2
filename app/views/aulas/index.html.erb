@@ -22,9 +22,21 @@
         <td><%= aula.bloque %></td>
         <td><%= aula.capacidad %></td>
         <td><%= aula.observacion %></td>
-        <td><%= link_to 'Ver', aula %></td>
-        <td><%= link_to 'Editar', edit_aula_path(aula) %></td>
-        <td><%= link_to 'Eliminar', aula, method: :delete, data: { confirm: 'Estas Seguro?' } %></td>
+
+        <td><%= link_to aula, class:"btn btn-success"  do %>
+            <i class="glyphicon glyphicon-eye-open"></i>
+           <% end %></td>
+
+
+        <td><%= link_to edit_aula_path(aula), class:" btn btn-info" do  %> 
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %> </td>
+
+
+        <td><%= link_to aula, method: :delete, data: { confirm: 'Estas Seguro?' }, class:'btn btn-danger' do %> 
+             <i class="glyphicon glyphicon-trash"></i>
+          <% end %></td>
+          
       </tr>
     <% end %>
   </tbody>
