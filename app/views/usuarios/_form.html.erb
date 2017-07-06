@@ -11,17 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre, id: :usuario_nombre %>
-  </div>
-
+        <div class="field">
+          <%= form.label :nombre %><br>
+          <%= form.text_field :nombre, id: :usuario_nombre %>
+        </div>
+ 
   <div class="field">
     <%= form.label :ci %>
     <%= form.text_field :ci, id: :usuario_ci %>
   </div>
 
+<div class="field">
+    <%= form.label :facultad_id %><br>
+    <%= form.collection_select(:facultad_id, Facultad.all, :id, :nombre) %><br>
+    <%= form.label :registro_carrera_id %><br>
+    <%= form.collection_select(:registro_carrera_id, RegistroCarrera.all, :id, :nombreCarrera) %><br>
+    <%= form.label :anho_carrera_id %><br>
+    <%= form.collection_select(:anho_carrera_id, AnhoCarrera.all, :id, :anho) %><br>
+</div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
