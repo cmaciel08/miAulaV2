@@ -1,3 +1,4 @@
 class AnhoCarrera < ApplicationRecord
-	has_many :asignacion_aulas, :usuarios
+	has_many :asignacion_aulas
+	has_many :usuarios
 end
