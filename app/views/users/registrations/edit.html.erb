@@ -4,6 +4,27 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.email_field :nombre, autofocus: true %>
+  </div>
+    <div><%= f.check_box :es_mujer, {}, true %> <%= f.label :es_mujer, "Mujer" %> </div>
+    <div><%= f.check_box :es_mujer, {}, false %> <%= f.label :es_mujer, "Hombre" %> </div>
+  
+
+    <div><%= f.label :fecha_nacimiento %><br />
+        <%= f.date_select :fecha_nacimiento %></div>
+
+  <div class="field">
+    <%= f.label :facultad_id %><br>
+    <%= f.collection_select(:facultad_id, Facultad.all, :id, :nombre) %><br>
+    <%= f.label :registro_carrera_id %><br>
+    <%= f.collection_select(:registro_carrera_id, RegistroCarrera.all, :id, :nombreCarrera) %><br>
+    <%= f.label :anho_carrera_id %><br>
+    <%= f.collection_select(:anho_carrera_id, AnhoCarrera.all, :id, :anho) %><br>
+</div>
+
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>

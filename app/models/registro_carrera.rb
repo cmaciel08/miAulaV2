@@ -4,4 +4,5 @@ class RegistroCarrera < ApplicationRecord
 	validates :semestre, presence: true, length: {minimum: 2, maximum: 10, :message => ": Debe cargar cómo mínimo 2 valor numérico y como máximo 10"}
 	has_many :asignacion_aulas
 	has_many :usuarios
+	has_many :users
 end

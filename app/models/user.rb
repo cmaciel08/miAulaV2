@@ -4,5 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
+	belongs_to :anho_carrera 
+	belongs_to :facultad
+	belongs_to :registro_carrera
 end
