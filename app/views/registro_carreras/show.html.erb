@@ -1,19 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nombrecarrera:</strong>
-  <%= @registro_carrera.nombreCarrera %>
-</p>
+<table class="table table-striped">
 
-<p>
-  <strong>Anho:</strong>
-  <%= @registro_carrera.anho %>
-</p>
+  <tbody>
+    <tr>
+        <td><p>
+			  <strong>Nombrecarrera:</strong>
+			  <%= @registro_carrera.nombreCarrera %>
+			</p></td>
 
-<p>
-  <strong>Semestre:</strong>
-  <%= @registro_carrera.semestre %>
-</p>
+		<td><p>
+			  <strong>Anho:</strong>
+			  <%= @registro_carrera.anho %>
+		</p></td>
 
-<%= link_to  edit_registro_carrera_path(@registro_carrera), class: "btn btn-success" do %> <i class="glyphicon glyphicon-pencil"></i><% end %> |
-<button type="button" class="btn btn-defauld"> <%= link_to 'Atras', registro_carreras_path %> </button>
+		<td><p>
+			  <strong>Semestre:</strong>
+			  <%= @registro_carrera.semestre %>
+		</p></td>
+
+		<td>
+			<%= link_to  edit_registro_carrera_path(@registro_carrera), class: "btn btn-success" do %> <i class="glyphicon glyphicon-pencil"></i><% end %> |
+			<button type="button" class="btn btn-defauld"> <%= link_to 'Atras', registro_carreras_path %> </button>
+		</td>
+	</tr>
+</tbody>

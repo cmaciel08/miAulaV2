@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
+ <p id="notice"><%= notice %></p>
 
 <h1>Anho Carreras</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Anho</th>
@@ -14,9 +14,15 @@
     <% @anho_carreras.each do |anho_carrera| %>
       <tr>
         <td><%= anho_carrera.anho %></td>
-        <td><%= link_to 'Show', anho_carrera %></td>
-        <td><%= link_to 'Edit', edit_anho_carrera_path(anho_carrera) %></td>
-        <td><%= link_to 'Destroy', anho_carrera, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to anho_carrera, class:"btn btn-success"  do %>
+            <i class="glyphicon glyphicon-eye-open"></i>
+           <% end %> </td>  
+        <td><%= link_to edit_anho_carrera_path(anho_carrera), class:" btn btn-info" do  %> 
+              <i class="glyphicon glyphicon-pencil"></i>
+            <% end %></td> 
+        <td><%= link_to anho_carrera, method: :delete, data: { confirm: 'Estas seguro?' }, class:'btn btn-danger' do %> 
+             <i class="glyphicon glyphicon-trash"></i>
+        <%end %></td>
       </tr>
     <% end %>
   </tbody>

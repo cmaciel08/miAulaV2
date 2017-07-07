@@ -1,9 +1,19 @@
 <p id="notice"><%= notice %></p>
+<table class="table table-striped">
 
-<p>
-  <strong>Anho:</strong>
-  <%= @anho_carrera.anho %>
-</p>
+  <tbody>
+    <tr>
+		<td><p>
+		  <strong>Anho:</strong>
+		  <%= @anho_carrera.anho %>
+		</p></td>
+<td>
+		<%= link_to edit_anho_carrera_path(@anho_carrera), class:"btn btn-success"  do %>
+                    <i class="glyphicon glyphicon-pencil"></i>
+                   <% end %> |
+		<button type="button" class="btn btn-defaul"><%= link_to 'Atras', anho_carreras_path %></button>
+	</td>
+</tr>
+</tbody>
+</table>
 
-<%= link_to 'Edit', edit_anho_carrera_path(@anho_carrera) %> |
-<%= link_to 'Back', anho_carreras_path %>

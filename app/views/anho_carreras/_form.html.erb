@@ -10,13 +10,20 @@
       </ul>
     </div>
   <% end %>
+<table class="table table-striped">
 
-  <div class="field">
-    <%= form.label :anho %>
-    <%= form.text_field :anho, id: :anho_carrera_anho %>
-  </div>
+  <tbody>
+    <tr>
+        <td><div class="field">
+          <%= form.label :anho %>
+          <%= form.text_field :anho, id: :anho_carrera_anho %>
+        </div></td>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
+    <td><div class="actions">
+        <%= form.submit %>
+    </div></td>
 <% end %>
+</tr>
+</tbody>
+</table>

@@ -1,27 +1,37 @@
 <p id="notice"><%= notice %></p>
+<table class="table table-striped">
 
-<p>
-  <strong>Observacion:</strong>
-  <%= @asignacion_aula.observacion %>
-</p>
-<p>
-  <strong>Año:</strong>
-  <%= @asignacion_aula.anho_carrera_id %>
-</p>
-<p>
-  <strong>Facultad:</strong>
-  <%= @asignacion_aula.facultad_id %>
-</p>
-<p>
-  <strong>Carrera:</strong>
-  <%= @asignacion_aula.registro_carrera_id %>
-</p>
-<p>
-  <strong>Carrera:</strong>
-  <%= @asignacion_aula.aula_id %>
-</p>
+  <tbody>
+    <tr>
+        <td><p>
+            <strong>Observacion:</strong>
+            <%= @asignacion_aula.observacion %>
+        </p></td>
 
-<%= link_to edit_asignacion_aula_path(@asignacion_aula),  class:"btn btn-success"  do %>
-            <i class="glyphicon glyphicon-pencil"></i>
-           <% end %> |
-<button type="button" class="btn btn-defaul"><%= link_to 'Atras', asignacion_aulas_path %></button>
+        <td><p>
+          <strong>Año:</strong>
+          <%= @asignacion_aula.anho_carrera_id %>
+        </p></td>
+
+        <td><p>
+          <strong>Facultad:</strong>
+          <%= @asignacion_aula.facultad_id %>
+        </p></td>
+
+        <td><p>
+          <strong>Carrera:</strong>
+          <%= @asignacion_aula.registro_carrera_id %>
+        </p></td>
+        <td><p>
+          <strong>Carrera:</strong>
+          <%= @asignacion_aula.aula_id %>
+        </p></td>
+
+
+      <td>  <%= link_to edit_asignacion_aula_path(@asignacion_aula),  class:"btn btn-success"  do %>
+                    <i class="glyphicon glyphicon-pencil"></i>
+                   <% end %> |
+        <button type="button" class="btn btn-defaul"><%= link_to 'Atras', asignacion_aulas_path %></button></td>
+  </tr>
+</tbody>
+</table>
