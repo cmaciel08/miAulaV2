@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :observacions
+  resources :dia
+  resources :semestres
   resources :asignacions
   resources :anho_carreras
   devise_for :users
