@@ -5,4 +5,5 @@ class AsignacionAula < ApplicationRecord
 	belongs_to :registro_carrera
 	belongs_to :semestre
 	belongs_to :observacion
+	belongs_to :user, optional: true
 end

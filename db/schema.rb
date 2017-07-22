@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170708205915) do
+ActiveRecord::Schema.define(version: 20170722232637) do
 
   create_table "anho_carreras", force: :cascade do |t|
     t.string "anho"
@@ -91,12 +91,13 @@ ActiveRecord::Schema.define(version: 20170708205915) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "registro_carrera_id", default: 1, null: false
-    t.integer "facultad_id", default: 1, null: false
-    t.integer "anho_carrera_id", default: 1, null: false
+    t.integer "registro_carrera_id"
+    t.integer "facultad_id"
+    t.integer "anho_carrera_id"
     t.string "nombre"
     t.datetime "fecha_nacimiento"
-    t.boolean "es_mujer"
+    t.boolean "es_mujer", default: false
+    t.integer "asignacion_aula_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

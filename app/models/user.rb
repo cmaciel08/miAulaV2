@@ -8,4 +8,5 @@ class User < ApplicationRecord
 	belongs_to :anho_carrera, optional: true
 	belongs_to :facultad, optional: true
 	belongs_to :registro_carrera, optional: true
+	belongs_to :asignacion_aula, optional: true
 end
