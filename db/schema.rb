@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170707033048) do
+ActiveRecord::Schema.define(version: 20170708205915) do
 
   create_table "anho_carreras", force: :cascade do |t|
     t.string "anho"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20170707033048) do
     t.integer "facultad_id"
     t.integer "aula_id"
     t.integer "registro_carrera_id"
+    t.integer "semestre_id"
+    t.integer "observacion_id"
   end
 
   create_table "asignacions", force: :cascade do |t|
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170707033048) do
     t.string "observacion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "aula_id"
   end
 
   create_table "facultads", force: :cascade do |t|
@@ -55,10 +58,22 @@ ActiveRecord::Schema.define(version: 20170707033048) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "observacions", force: :cascade do |t|
+    t.string "nombreDia"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "registro_carreras", force: :cascade do |t|
     t.string "nombreCarrera"
     t.string "anho"
     t.string "semestre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "semestres", force: :cascade do |t|
+    t.string "nombreSemestre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -76,12 +91,12 @@ ActiveRecord::Schema.define(version: 20170707033048) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "registro_carrera_id"
-    t.integer "facultad_id"
-    t.integer "anho_carrera_id"
+    t.integer "registro_carrera_id", default: 1, null: false
+    t.integer "facultad_id", default: 1, null: false
+    t.integer "anho_carrera_id", default: 1, null: false
     t.string "nombre"
     t.datetime "fecha_nacimiento"
-    t.boolean "es_mujer", default: false
+    t.boolean "es_mujer"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
