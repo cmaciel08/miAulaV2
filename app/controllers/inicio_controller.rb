@@ -1,5 +1,5 @@
 class InicioController < ApplicationController
-  #before_action :authenticate_user! 
+  before_action :authenticate_user! 
   # GET /asignacion_aulas
   # GET /asignacion_aulas.json
   def index

@@ -16,15 +16,6 @@
                 <li><%= link_to "Dias", 'http://localhost:3000/observacions' %></li>
                 <li><%= link_to "Semestres", 'http://localhost:3000/semestres' %></li>
                 
-
-                
-
-            </ul>
-        
-
-
-            <ul class="nav navbar-nav navbar-right">
-                
                 <% if current_user %>
                      <li><%= current_user.email %></li>.
                     <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
@@ -32,7 +23,13 @@
                 <% else %>
                     <li><%= link_to 'Entrar', new_user_session_path %></li>
                 <% end %>
+                
+
             </ul>
+        
+
+
+            
         
     </div>
 </nav>
