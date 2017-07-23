@@ -2,10 +2,22 @@
     <div class="container">
  
 
+ <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
 
-
-
+      <a class="navbar-brand" href="http://localhost:3000"><div class="navbar-header">
+      <a class="navbar-brand pull-left" href="/">
+        <img border="2" class="img" style="margin-top: -14px;" src="miaula_logo.png" alt="Logo 300w">
+      </a>
+    </div></a>
+ 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
        
             <ul class="nav navbar-nav navbar-left">
                 <li><%= link_to "Asignacion de Aula", 'http://localhost:3000/asignacion_aulas' %></li>
@@ -17,8 +29,8 @@
                 <li><%= link_to "Semestres", 'http://localhost:3000/semestres' %></li>
                 
                 <% if current_user %>
-                     <li><%= current_user.email %></li>.
-                    <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
+                    <li><a><%= current_user.email %></a></li>.
+                    <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
                     <li><%= link_to 'Salir', destroy_user_session_path, method: :delete %></li>
                 <% else %>
                     <li><%= link_to 'Entrar', new_user_session_path %></li>
@@ -28,7 +40,7 @@
             </ul>
         
 
-
+ </div>
             
         
     </div>
