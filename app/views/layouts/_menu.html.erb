@@ -14,14 +14,19 @@
                 <li><%= link_to "Registro de Facultad", 'http://localhost:3000/facultads' %></li>
                 <li><%= link_to "Registro de Año", 'http://localhost:3000/anho_carreras' %></li>
                 <li><%= link_to "Dias", 'http://localhost:3000/observacions' %></li>
-                <li><%= link_to "Semestres", 'http://localhost:3000/semestres' %></li>
+                <li><%= link_to "Semestre", 'http://localhost:3000/semestres' %></li>
                 
                 <% if current_user %>
-                     <li><%= current_user.email %></li>.
-                    <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
+                    <li><a><%= current_user.email %></a></li>.
+                    <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
                     <li><%= link_to 'Salir', destroy_user_session_path, method: :delete %></li>
+                <% elsif current_admin %>
+                    <li><a><%= current_admin.email %></a></li>.
+                    <li><%= link_to 'Editar Admin',edit_admin_registration_path %></li>
+                    <li><%= link_to 'Salir', destroy_admin_session_path, method: :delete %></li>
                 <% else %>
-                    <li><%= link_to 'Entrar', new_user_session_path %></li>
+                    <li><%= link_to 'Alumno', new_user_session_path %></li>
+                    <li><%= link_to "Administrar", new_admin_session_path %></li>
                 <% end %>
                 
 
