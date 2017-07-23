@@ -1,4 +1,5 @@
 class RegistroCarrerasController < ApplicationController
+  before_action :authenticate_admin!  
   before_action :set_registro_carrera, only: [:show, :edit, :update, :destroy]
 
   # GET /registro_carreras

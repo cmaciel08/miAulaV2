@@ -1,4 +1,5 @@
 class ObservacionsController < ApplicationController
+  before_action :authenticate_admin!  
   before_action :set_observacion, only: [:show, :edit, :update, :destroy]
 
   # GET /observacions

@@ -1,4 +1,5 @@
 class DetalleAulasController < ApplicationController
+  before_action :authenticate_admin!  
   before_action :set_detalle_aula, only: [:show, :edit, :update, :destroy]
 
   # GET /detalle_aulas

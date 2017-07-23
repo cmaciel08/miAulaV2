@@ -1,4 +1,5 @@
 class AnhoCarrerasController < ApplicationController
+  before_action :authenticate_admin!   
   before_action :set_anho_carrera, only: [:show, :edit, :update, :destroy]
 
   # GET /anho_carreras

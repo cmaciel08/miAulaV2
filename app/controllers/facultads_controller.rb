@@ -1,4 +1,5 @@
 class FacultadsController < ApplicationController
+  before_action :authenticate_admin!  
   before_action :set_facultad, only: [:show, :edit, :update, :destroy]
   # GET /facultads
   # GET /facultads.json

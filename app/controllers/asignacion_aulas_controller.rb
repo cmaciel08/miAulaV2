@@ -1,4 +1,5 @@
 class AsignacionAulasController < ApplicationController
+  before_action :authenticate_admin!  
   before_action :set_asignacion_aula, only: [:show, :edit, :update, :destroy]
 
   # GET /asignacion_aulas
