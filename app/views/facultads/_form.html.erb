@@ -11,20 +11,27 @@
     </div>
   <% end %>
 
+<div class="container">
+<div class="row">
+  <div class="span8">
   <table class="table table-striped">
 
-  <tbody>
-    <tr>
+        <tbody>
+          <tr>
 
-      <td><div class="field">
-        <%= form.label :nombre %>
-        <%= form.text_field :nombre, id: :facultad_nombre %>
-      </div></td>
+            <td><div class="field">
+              <%= form.label :nombre %>
+              <%= form.text_field :nombre, id: :facultad_nombre %>
+            </div></td>
 
-      <td><div class="actions">
-        <%= form.submit %>
-      </div></td>
-    <% end %>
-  </tr>
-</tbody>
-</table>
+            <td><div class="actions">
+              <%= form.submit %>
+            </div></td>
+          <% end %>
+        </tr>
+      </tbody>
+      </table>
+
+ </div>
+</div>
+</div>

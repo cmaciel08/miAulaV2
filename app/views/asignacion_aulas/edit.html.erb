@@ -4,14 +4,12 @@
 			<h2 class="text-center text-muted">Editar Asignacion Aula</h2><br>
 	</div>
 
-	<div class="span2">
-	</div>
 
 	<div  class="span8">
 
-		<%= render 'form', asignacion_aula: @asignacion_aula %><br>
+		<%= render 'form', asignacion_aula: @asignacion_aula %>
 
-		<%= link_to @asignacion_aula, class:" btn btn-info" do  %> 
+		<%= link_to @asignacion_aula, class:" btn btn-success" do  %> 
 		              <i class="glyphicon glyphicon-eye-open"></i>
 		            <% end %> |
 		<button type="button" class="btn btn-defauld"><%= link_to 'Atras', asignacion_aulas_path %></button>
