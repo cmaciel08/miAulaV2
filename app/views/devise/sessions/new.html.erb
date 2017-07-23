@@ -1,7 +1,11 @@
   <div class="login-page">
   <div class="form">
   
+
   <link rel="stylesheet" media="all" href="/assets/style.scss" />
+  <div class="box-header">
+        <h2>Administrador</h2>
+  </div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
