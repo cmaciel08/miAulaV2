@@ -11,12 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombreDia %>
-    <%= form.text_field :nombreDia, id: :observacion_nombreDia %>
-  </div>
+<div class="container">
+<div class="row">
+  <div class="span8">
 
-  <div class="actions">
-    <%= form.submit %>
+        <div class="field">
+          <%= form.label :nombreDia %>
+          <%= form.text_field :nombreDia, id: :observacion_nombreDia %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      <% end %>
+
+    </div>
   </div>
-<% end %>
+</div>

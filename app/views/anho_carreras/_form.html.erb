@@ -10,20 +10,27 @@
       </ul>
     </div>
   <% end %>
-<table class="table table-striped">
 
-  <tbody>
-    <tr>
-        <td><div class="field">
-          <%= form.label :anho %>
-          <%= form.text_field :anho, id: :anho_carrera_anho %>
-        </div></td>
+<div class="container">
+<div class="row">
+  <div class="span8"> 
+      <table class="table table-striped">
+
+        <tbody>
+          <tr>
+              <td><div class="field">
+                <%= form.label :anho %>
+                <%= form.text_field :anho, id: :anho_carrera_anho %>
+              </div></td>
 
 
-    <td><div class="actions">
-        <%= form.submit %>
-    </div></td>
-<% end %>
-</tr>
-</tbody>
-</table>
+          <td><div class="actions">
+              <%= form.submit %>
+          </div></td>
+      <% end %>
+      </tr>
+      </tbody>
+      </table>
+  </div>
+</div>
+</div>
