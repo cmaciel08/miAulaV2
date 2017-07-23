@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="row">
-    <div class="span2">
-    </div>
-    <div class="span4">
+    
+    <div class="span4" glyphicon-plus>
             <h2 class="text-center text-muted">Asignacion Aulas</h2>
     
-            <%= link_to new_asignacion_aula_path, class: "btn btn-primary" do %>
+            <%= link_to new_asignacion_aula_path,  class: "btn btn-primary" do %>
 
               <i class="glyphicon glyphicon-plus"></i><% end %>
 
     </div>
 
-    <div class="span 8 ">
+    <div class="span 8">
 
 
       <table class="table table-striped">
@@ -44,7 +43,8 @@
               <td><%= a.aula.bloque %></td>
               <td><%= a.aula.capacidad %></td>
               <td><%= a.aula.observacion %></td>
-              <td><%= link_to a,class:"btn btn-success"  do %>
+
+              <td><%= link_to a, class:"btn btn-success"  do %>
                   <i class="glyphicon glyphicon-eye-open"></i>
                  <% end %> </td>
 
@@ -54,7 +54,7 @@
 
 
               <td><%= link_to a, method: :delete, data: { confirm: 'Estas Seguro?' }, class:'btn btn-danger' do %> 
-                   <i class="glyphicon glyphicon-trash"></i>
+                   <i class="glyphicon glyphicon-trash" ></i>
                 <% end %></td>
             </tr> 
           <% end %>

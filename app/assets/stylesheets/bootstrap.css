@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+
 /*!
  * bootswatch v3.3.7
  * Homepage: http://bootswatch.com
@@ -13,9 +13,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  
 }
 body {
   margin: 0;
@@ -283,6 +281,7 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .glyphicon-asterisk:before {
   content: "\002a";
 }
@@ -360,7 +359,7 @@ th {
   content: "\e019";
 }
 .glyphicon-trash:before {
-  content: "\e020";
+  width: 50px; height: 50px;
 }
 .glyphicon-home:before {
   content: "\e021";
@@ -1096,9 +1095,7 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  
 }
 a {
   color: #2780e3;
