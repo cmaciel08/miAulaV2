@@ -1,5 +1,8 @@
 class InicioController < ApplicationController
-  before_action :authenticate_user! 
+
+    #before_action :authenticate_user!   
+
+
   # GET /asignacion_aulas
   # GET /asignacion_aulas.json
   def index
@@ -15,19 +18,25 @@ class InicioController < ApplicationController
 			   #@asignacion_aulas = current_user.facultad.asignacion_aulas
       #elsif current_admin
          #@asignacion_aulas = AsignacionAula.all
-		  #else
+      #else
 			   #@asignacion_aulas = AsignacionAula.all
 		  #end
+      if current_admin
+         redirect_to asignacion_aulas_path
+         
+          elsif !current_user
+            redirect_to new_user_session_path
 
-      if !current_user.facultad_id 
-         #@asignacion_aulas = AsignacionAula.all
-         #Redireccionar a editar 
-         redirect_to edit_user_registration_path
-         #@asignacion_aulas = current_user.facultad.asignacion_aulas
-      elsif current_user
-        @asignacion_aulas = current_user.facultad.asignacion_aulas
-      else
-         @asignacion_aulas = AsignacionAula.all
+          elsif !current_user.facultad_id 
+             #@asignacion_aulas = AsignacionAula.all
+             #Redireccionar a editar 
+             redirect_to edit_user_registration_path
+             #@asignacion_aulas = current_user.facultad.asignacion_aulas
+          elsif current_user
+            @asignacion_aulas = current_user.facultad.asignacion_aulas
+
+          else
+             @asignacion_aulas = AsignacionAula.all
       end
 	end
   # GET /asignacion_aulas/
