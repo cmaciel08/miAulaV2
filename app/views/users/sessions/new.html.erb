@@ -4,6 +4,7 @@
   <div class="form">
   
   <link rel="stylesheet" media="all" href="/assets/style.scss" />
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -30,7 +31,7 @@
 
 <%= render "users/shared/links" %>
 
-  </div>
+</div>
 </div>
   
 
