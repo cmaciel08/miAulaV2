@@ -11,8 +11,8 @@ class InicioController < ApplicationController
   		#@asignacion_aulas = AsignacionAula.where(current_user.registro_carrera.asignacion_aulas)
     	#@asignacion_aulas = AsignacionAula.where(["users.registro_carrera_id=registro_carreras.id"])
     	#@productos = Producto.where(["nombre LIKE ?","%#{params[:Buscar]}%"]).order(:precio)
-		@asignacion_aulas = current_user.anho_carrera.facultad.asignacion_aulas
-  end
+		@asignacion_aulas = current_user.facultad.asignacion_aulas
+	end
   # GET /asignacion_aulas/
   def show
   end
