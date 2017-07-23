@@ -12,61 +12,66 @@
       </ul>
     </div>
   <% end %>
+<div class="container">
+<div class="row">
+  <div class="span4">
 
-<table class="table table-striped">
+      <table class="table table-striped">
 
-<thead>
-    <tr>
-      <th>Facultad</th>
-      <th>Carrera</th>
-      <th>Año</th>
-      <th>Semestre</th>
-      <th>Aula</th>
-      <th>Dias</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td><div class="field">
-  
-            <%= form.collection_select(:facultad_id, Facultad.all, :id, :nombre) %><br>
-            </div></td>
+      <thead>
+          <tr>
+            <th>Facultad</th>
+            <th>Carrera</th>
+            <th>Año</th>
+            <th>Semestre</th>
+            <th>Aula</th>
+            <th>Dias</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td><div class="field">
+        
+                  <%= form.collection_select(:facultad_id, Facultad.all, :id, :nombre) %><br>
+                  </div></td>
 
-        <td><div class="field">
+              <td><div class="field">
 
-              <%= form.collection_select(:registro_carrera_id, RegistroCarrera.all, :id, :nombreCarrera) %><br>
-              </div></td>
+                    <%= form.collection_select(:registro_carrera_id, RegistroCarrera.all, :id, :nombreCarrera) %><br>
+                    </div></td>
 
-        <td><div class="field">
-              
-              <%= form.collection_select(:anho_carrera_id, AnhoCarrera.all, :id, :anho) %><br>
-              </div></td>
+              <td><div class="field">
+                    
+                    <%= form.collection_select(:anho_carrera_id, AnhoCarrera.all, :id, :anho) %><br>
+                    </div></td>
 
-         <td><div class="field">
-              
-              <%= form.collection_select(:semestre_id, Semestre.all, :id, :nombreSemestre) %><br>
-              </div></td>            
+               <td><div class="field">
+                    
+                    <%= form.collection_select(:semestre_id, Semestre.all, :id, :nombreSemestre) %><br>
+                    </div></td>            
 
-          
-        <td><div class="field">
-              
-              <%= form.collection_select(:aula_id, Aula.all, :id, :nombre) %><br>
-              </div></td>
+                
+              <td><div class="field">
+                    
+                    <%= form.collection_select(:aula_id, Aula.all, :id, :nombre) %><br>
+                    </div></td>
 
-        <td><div class="field">
-              
-              <%= form.collection_select(:observacion_id, Observacion.all, :id, :nombreDia) %><br>
-              </div></td>      
+              <td><div class="field">
+                    
+                    <%= form.collection_select(:observacion_id, Observacion.all, :id, :nombreDia) %><br>
+                    </div></td>      
 
-              
+                    
 
-  <td><div class="actions">
-      <%= form.submit %>
-    </div>
-  </td>
-<% end %>
-</tr>
-</tbody>
-</table>
-
+        <td><div class="actions">
+            <%= form.submit %>
+          </div>
+        </td>
+      <% end %>
+      </tr>
+      </tbody>
+      </table>
+  </div>
+</div>
+</div>

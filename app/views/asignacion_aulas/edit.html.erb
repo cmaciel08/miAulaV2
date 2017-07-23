@@ -1,10 +1,20 @@
+<div class="container">
 <div class="row">
 	<div class="span4">
-			<h2 class="text-center text-muted">Editar Asignacion Aula</h2>
+			<h2 class="text-center text-muted">Editar Asignacion Aula</h2><br>
+	</div>
 
-<%= render 'form', asignacion_aula: @asignacion_aula %><br>
+	<div class="span2">
+	</div>
 
-<%= link_to @asignacion_aula, class:" btn btn-info" do  %> 
-              <i class="glyphicon glyphicon-eye-open"></i>
-            <% end %> |
-<button type="button" class="btn btn-defauld"><%= link_to 'Atras', asignacion_aulas_path %></button>
+	<div  class="span8">
+
+		<%= render 'form', asignacion_aula: @asignacion_aula %><br>
+
+		<%= link_to @asignacion_aula, class:" btn btn-info" do  %> 
+		              <i class="glyphicon glyphicon-eye-open"></i>
+		            <% end %> |
+		<button type="button" class="btn btn-defauld"><%= link_to 'Atras', asignacion_aulas_path %></button>
+	</div>
+</div>
+</div>
