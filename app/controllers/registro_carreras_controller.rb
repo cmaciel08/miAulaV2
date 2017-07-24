@@ -70,6 +70,6 @@ class RegistroCarrerasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def registro_carrera_params
-      params.require(:registro_carrera).permit(:nombreCarrera, :anho, :semestre)
+      params.require(:registro_carrera).permit(:nombreCarrera, :anho, :semestre, :facultad_id)
     end
 end

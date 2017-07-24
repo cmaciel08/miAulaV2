@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723141414) do
+ActiveRecord::Schema.define(version: 20170724000910) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 20170723141414) do
     t.string "semestre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "facultad_id"
   end
 
   create_table "semestres", force: :cascade do |t|

@@ -25,7 +25,10 @@
               <%= form.text_field :nombreCarrera, id: :registro_carrera_nombreCarrera %>
             </div>
           </td>
-
+   <td><div class="field">
+        
+                  <%= form.collection_select(:facultad_id, Facultad.all, :id, :nombre) %><br>
+                  </div></td>
           <td>
             <div class="actions">
               <%= form.submit %>

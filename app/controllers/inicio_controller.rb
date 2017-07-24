@@ -32,9 +32,8 @@ class InicioController < ApplicationController
              #Redireccionar a editar 
              redirect_to edit_user_registration_path
              #@asignacion_aulas = current_user.facultad.asignacion_aulas
-          elsif current_user
-            @asignacion_aulas = current_user.facultad.asignacion_aulas
-
+          elsif current_user             
+            @asignacion_aulas = current_user.registro_carrera.asignacion_aulas
           else
              @asignacion_aulas = AsignacionAula.all
       end
