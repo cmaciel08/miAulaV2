@@ -8,59 +8,52 @@
 </head>
 
 <body>
-
-    <nav class="navbar-inverse">
-  <div class="container-fluid">
-
-
-<p class="navbar-text pull-right">
-
-<ul class="nav navbar-nav navbar-left">
-                                
-     <% if current_user %>
-        <li><a><%= current_user.email %></a></li>.
-        <li><%= link_to 'Editar Perfil',edit_user_registration_path %></li>
-        <li><%= link_to 'Salir', destroy_user_session_path, method: :delete %></li>
-
-    
-                
-
-    </ul>
-    </div>
-
-  <div class="navbar-inverse">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+ </button>
         <div>
             <a class="navbar-brand" href="http://localhost:3000"></a>
             <img src="miaula_logo.png" width="50" height="50">
         </div>
       
+<nav class="navbar-inverse">
+  <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-left">
+          <% if current_user %>        
+      </ul>
 
+  <div class="container-fluid">
+      <div class="navbar-inverse">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+      </div>
+    <!-- Si usuario esta registrado-->
+  
+    <!-- Rayitas de Menu -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li><%= link_to 'Editar Alumno',edit_user_registration_path %></li>
+        <li><%= link_to 'Salir', destroy_user_session_path, method: :delete %></li>
+      </ul>
     </div>
 
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <div class="navbar-inverse">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+      </div>
+    <!-- Si usuario esta registrado-->
+     <% elsif current_admin %>
+    <!-- Rayitas de Menu -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="user/registration/edit">Editar Perfil</a></li>
-        <li><a href="user/session/destroy">Salir</a></li>
-      </ul>
-  
-
-     
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-
-
-
-  <% elsif current_admin %>
         <li><%= link_to "Asignacion de Aula", 'http://localhost:3000/asignacion_aulas' %></li>
         <li><%= link_to "Aulas", 'http://localhost:3000/aulas' %></li>
         <li><%= link_to "Registro de Carreras", 'http://localhost:3000/registro_carreras' %></li>
@@ -71,24 +64,8 @@
         <li><a><%= current_admin.email %></a></li>.
         <li><%= link_to 'Editar Admin',edit_admin_registration_path %></li>
         <li><%= link_to 'Salir', destroy_admin_session_path, method: :delete %></li>
-
-<!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="localhost:3000/asignacion_aulas">Asignacion de Aula</a></li>
-        <li><a href="localhost:3000/aulas">Aulas</a></li>
-        <li><a href="localhost:3000/registro_carreras">Registro de Carreras</a></li>
-        <li><a href="localhost:3000/facultads">Registro de Facultad</a></li>
-        <li><a href="localhost:3000/anho_carreras">Registro de Año</a></li>
-        <li><a href="localhost:3000/observacions">Dias</a></li>
-        <li><a href="localhost:3000/semestres">Semestre</a></li>
-        <li><a href="localhost:3000/edit_admin_registration">Editar Admin</a></li>
-        <li><a href="localhost:3000/destroy_admin_session">Salir</a></li>
-
       </ul>
-  
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
 
 
     <% else %>
@@ -96,18 +73,7 @@
         <li><%= link_to "Administrar", new_admin_session_path %></li>
     <% end %>
 
-
-
-
-
 </nav>
-
-
-
-</nav>
-
-
-
 </html>
 
 
