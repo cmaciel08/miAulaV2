@@ -21,28 +21,24 @@
     <tr>
 
             <td>  <div class="field">
-             
                 <%= form.text_field :nombre, id: :aula_nombre, :class=>"form-control", placeholder: "11A" %>
               </div>
             </td>
 
 
             <td>  <div class="field">
-                <%= form.label :bloque %>
-                <%= form.text_field :bloque, id: :aula_bloque %>
+                <%= form.text_field :bloque, id: :aula_bloque, :class=>"form-control", placeholder: "Bloque" %>
               </div>
 
             </td>
 
             <td><div class="field">
-                <%= form.label :capacidad %>
-                <%= form.text_field :capacidad, id: :aula_capacidad %>
+                <%= form.text_field :capacidad, id: :aula_capacidad, :class=>"form-control", placeholder: "Capacidad" %>
               </div>
             </td>  
 
             <td><div class="field">
-                <%= form.label :observacion %>
-                <%= form.text_field :observacion, id: :aula_observacion %>
+                <%= form.text_field :observacion, id: :aula_observacion, :class=>"form-control", placeholder: "observacion" %>
               </div>
             </td>
           </div>

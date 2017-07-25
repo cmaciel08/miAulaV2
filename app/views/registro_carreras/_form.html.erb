@@ -21,13 +21,12 @@
         <tr>
 
           <td>  <div class="field">
-              <%= form.label :Carrera %>
-              <%= form.text_field :nombreCarrera, id: :registro_carrera_nombreCarrera %>
+              <%= form.text_field :nombreCarrera, id: :registro_carrera_nombreCarrera, :class=>"form-control", placeholder: "Carrera" %>
             </div>
           </td>
    <td><div class="field">
         
-                  <%= form.collection_select(:facultad_id, Facultad.all, :id, :nombre) %><br>
+                  <%= form.collection_select(:facultad_id, Facultad.all, :id, :nombre, :class=>"form-control", placeholder: "Facultad") %><br>
                   </div></td>
           <td>
             <div class="actions">

@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :observacion %>
-    <%= form.text_field :observacion, id: :detalle_aula_observacion %>
+    
+    <%= form.text_field :observacion, id: :detalle_aula_observacion, :class=>"form-control", placeholder: "observacion" %>
   </div>
 
   <div class="field">
-    <%= form.label :aula_id %>
-    <%= form.text_field :aula_id, id: :aula_aula_id %>
+    
+    <%= form.text_field :aula_id, id: :aula_aula_id, :class=>"form-control", placeholder: "Id Aula" %>
   </div>
 
   <div class="actions">

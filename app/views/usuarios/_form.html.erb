@@ -12,13 +12,11 @@
   <% end %>
 
         <div class="field">
-          <%= form.label :nombre %><br>
-          <%= form.text_field :nombre, id: :usuario_nombre %>
+          <%= form.text_field :nombre, id: :usuario_nombre, :class=>"form-control", placeholder: "Nombre" %>
         </div>
  
   <div class="field">
-    <%= form.label :ci %>
-    <%= form.text_field :ci, id: :usuario_ci %>
+    <%= form.text_field :ci, id: :usuario_ci, :class=>"form-control", placeholder: "Nº C.I" %>
   </div>
 
 <div class="field">
