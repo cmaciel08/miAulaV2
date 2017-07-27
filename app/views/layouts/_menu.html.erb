@@ -7,10 +7,10 @@
 
 <body>
  
-        <div>
-            <a class="navbar-brand" href="http://localhost:3000"></a>
+        <div class="container-fluid">
+            <a  href="http://localhost:3000">
             <img src="http://localhost:3000/miaula_logo.png" width="100" height="61">
-
+          </a>
         </div>
 
       
@@ -34,7 +34,8 @@
     <!-- Rayitas de Menu -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav  navbar-right">
-         <li><%= link_to 'Editar Alumno',edit_user_registration_path %></li>
+         <li><a>Hola <%= current_user.email %></a></li>
+         <li><%= link_to 'Editar Datos',edit_user_registration_path %></li>
         <li><%= link_to 'Salir', destroy_user_session_path, method: :delete %></li>
       </ul>
     </div>
