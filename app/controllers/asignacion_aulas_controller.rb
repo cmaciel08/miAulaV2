@@ -5,7 +5,8 @@ class AsignacionAulasController < ApplicationController
   # GET /asignacion_aulas
   # GET /asignacion_aulas.json
   def index
-    @asignacion_aulas = AsignacionAula.all
+    #@asignacion_aulas = AsignacionAula.all
+    @asignacion_aulas = current_admin.facultad.asignacion_aulas
   end
 
   # GET /asignacion_aulas/1

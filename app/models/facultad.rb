@@ -3,6 +3,7 @@ class Facultad < ApplicationRecord
 	has_many :asignacion_aulas
 	has_many :usuarios
 	has_many :users
+	has_many :admins
 	
 	has_many :registro_carreras
 
