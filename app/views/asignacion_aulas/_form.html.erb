@@ -19,18 +19,21 @@
       <table class="table table-striped">
 
       <thead>
-          <tr>
+          <tr class="info2">
             <th>Facultad</th>
             <th>Carrera</th>
             <th>Año</th>
             <th>Semestre</th>
             <th>Dias</th>
             <th>Aula</th>
+            <th>Fecha</th>
+            <th>Hora</th>
             <th colspan="3"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
+          
               <td><div class="field">
         
                   <%= form.collection_select(:facultad_id, Facultad.all, :id, :nombre) %><br>
@@ -62,12 +65,17 @@
                     <%= form.collection_select(:aula_id, Aula.all, :id, :nombre) %><br>
                     </div></td>
 
+               <td>  <div class="date">
+                <%= form.date_select :fecha  %>
+              </div>
+              </td>
 
+              <td>  <div class="time ">
+                <%= form.time_select :hora %>
+              </div>
+              </td>     
 
-    
-
-                    
-
+                
         <td><div class="actions">
             <%= form.submit "Crear" %>
           </div>
