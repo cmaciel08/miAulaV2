@@ -5,8 +5,8 @@ class AsignacionAulasController < ApplicationController
   # GET /asignacion_aulas
   # GET /asignacion_aulas.json
   def index
-    @asignacion_aulas = AsignacionAula.all
-    #@asignacion_aulas = current_admin.facultad.asignacion_aulas
+    #@asignacion_aulas = AsignacionAula.all
+    @asignacion_aulas = current_admin.facultad.asignacion_aulas
   end
 
   # GET /asignacion_aulas/1
@@ -71,6 +71,6 @@ class AsignacionAulasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def asignacion_aula_params
-      params.require(:asignacion_aula).permit(:observacion, :facultad_id, :anho_carrera_id, :aula_id, :registro_carrera_id, :semestre_id, :observacion_id, :fecha, :hora)
+      params.require(:asignacion_aula).permit(:observacion, :facultad_id, :anho_carrera_id, :aula_id, :registro_carrera_id, :semestre_id, :observacion_id)
     end
 end

@@ -12,12 +12,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-$(function (){
-        $('#article_published_on').datepicker();
-});
 
-= require jquery
-= require rails-ujs
+//= require jquery
+//= require rails-ujs
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .

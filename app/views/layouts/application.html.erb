@@ -2,14 +2,10 @@
 <html>
   <head>
     <title>Miaula</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application" %>
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <title><%= yield :title %></title>
   </head>
 
   <body>
@@ -23,4 +19,3 @@
   Todos los derechos reservados 2017, Tapiti Group.
   </footer></center>
 </html>
-
