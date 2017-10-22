@@ -71,6 +71,6 @@ class AsignacionAulasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def asignacion_aula_params
-      params.require(:asignacion_aula).permit(:observacion, :facultad_id, :anho_carrera_id, :aula_id, :registro_carrera_id, :semestre_id, :observacion_id)
+      params.require(:asignacion_aula).permit(:observacion, :facultad_id, :anho_carrera_id, :aula_id, :registro_carrera_id, :semestre_id, :observacion_id, :fecha, :hora)
     end
 end
