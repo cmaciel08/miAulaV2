@@ -5,10 +5,22 @@ class AsignacionAulasController < ApplicationController
   # GET /asignacion_aulas
   # GET /asignacion_aulas.json
   def index
-    #@asignacion_aulas = AsignacionAula.all
-    @asignacion_aulas = current_admin.facultad.asignacion_aulas
+    @asignacion_aulas = AsignacionAula.all
+    #@asignacion_aulas = current_admin.facultad.asignacion_aulas
   end
+   # if @presupuesto.nil?
+   #        @presupuesto = Presupuesto.new(fecha: DateTime.now)
+   #      end
 
+def asignar
+  #Aqui creo uno nuevo
+  @asignar=  AsignacionAula.new()
+  #Asigno el valor 
+  @asignar.aula_id = 1
+  #Guardo los valores
+  @asignar.save
+
+end
   # GET /asignacion_aulas/1
   # GET /asignacion_aulas/1.json
   def show
@@ -17,6 +29,7 @@ class AsignacionAulasController < ApplicationController
   # GET /asignacion_aulas/new
   def new
     @asignacion_aula = AsignacionAula.new
+
   end
 
   # GET /asignacion_aulas/1/edit
@@ -26,16 +39,16 @@ class AsignacionAulasController < ApplicationController
   # POST /asignacion_aulas
   # POST /asignacion_aulas.json
   def create
-    @asignacion_aula = AsignacionAula.new(asignacion_aula_params)
-
-    respond_to do |format|
-      if @asignacion_aula.save
-        format.html { redirect_to @asignacion_aula, notice: 'Asignacion aula was successfully created.' }
-        format.json { render :show, status: :created, location: @asignacion_aula }
-      else
-        format.html { render :new }
-        format.json { render json: @asignacion_aula.errors, status: :unprocessable_entity }
-      end
+    while asignacion_aula.facultad_id = Facultad.count
+    @asignacion_aula = AsignacionAula.new(
+      facultad_id: rand(Facultad.count), 
+      anho_carrera_id: rand(AnhoCarrera.count), 
+      aula_id: rand(4), 
+      registro_carrera_id: rand(4), 
+      semestre_id: rand(8), 
+      observacion_id: rand(4))
+    @asignacion_aula.save
+   
     end
   end
 
